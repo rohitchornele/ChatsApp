@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Noto Sans", sans-serif;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    background-image: url("https://res.cloudinary.com/dhc6husi2/image/upload/v1720606762/atgzw7t2ts4slqc1ar9r.jpg");
+    background-size: cover;
+    background-position: center;
+}
