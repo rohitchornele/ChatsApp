@@ -9,8 +9,6 @@ frontend/.env
 backend/.env
 
 # Package files
-frontend/package.json
-backend/package.json
 
 
 frontend/package-lock.json
