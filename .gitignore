@@ -11,8 +11,6 @@ backend/.env
 # Package files
 
 
-frontend/package-lock.json
-backend/package-lock.json
 
 # Optional: OS-specific files
 .DS_Store
