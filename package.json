@@ -30,8 +30,8 @@
     "socket.io": "^4.7.5"
   },
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "node backend/server.js",
+    "start": "node server.js prefix --backend",
+    "server": "node ./backend/server.js",
     "build": "npm install --prefix frontend && npm install --prefix backend && npm run build --prefix frontend",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -57,7 +57,6 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
-    "@babel" : "plugin-proposal-private-property-in-object"
   },
   "author": "",
   "license": "ISC"
