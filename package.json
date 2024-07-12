@@ -28,11 +28,12 @@
     "react-scripts": "5.0.1",
     "react-scrollable-feed": "^2.0.2",
     "socket.io": "^4.7.5",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.7.5",
+    "cors": "^2.8.5"
   },
   "scripts": {
     "start": "node server.js prefix --backend",
-    "server": "node ./backend/server.js",
+    "server": "node /backend/server.js",
     "build": " npm install --prefix backend && npm install express --prefix backend && npm install dotenv --prefix backend && npm install socket.io --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
