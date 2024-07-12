@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build" : "npm install && npm run build"
+    "build" : "npm install && npm i express && npm i socket.io && npm run build"
   },
   "author": "Rohit Chornele",
   "license": "ISC",
