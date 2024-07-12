@@ -1,11 +1,11 @@
 import { connectDB } from "./config/db.js";
 import { userRoutes } from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
+import { Server } from "socket.io";
 import { chatRoutes } from "./routes/chatRoutes.js";
 import { messageRoutes } from "./routes/messageRoutes.js";
 import path from 'path';
 import { createServer } from "http";
-import { Server } from "socket.io";
 import express from "express";
 import dotenv from "dotenv";
 
@@ -20,13 +20,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 8000;
 
-// API to get data
-// app.get('/', (req, res) => {
-    //     return res.send("Api is running")
-    // })
-    
-    
-    
+
     app.use("/api/user", userRoutes);
     app.use("/api/chat", chatRoutes);
     app.use("/api/message", messageRoutes);
@@ -50,15 +44,6 @@ const PORT = process.env.PORT || 8000;
 app.use(notFound);
 app.use(errorHandler);
 
-// app.get('/api/chats', (req, res) => {
-//     return res.send(chats)
-// })
-
-// app.get('/api/chats/:id', (req, res) => {
-//     // console.log(req.params.id)
-//     const  singleChat = chats.find(c=> c._id === req.params.id)
-//     res.send(singleChat)
-// })
 
 const server = createServer();
 
@@ -80,7 +65,6 @@ const io = new Server(
       
 }
 );
-
 
 
 io.on("connection", (socket) => {
