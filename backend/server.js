@@ -4,8 +4,8 @@ import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 import { chatRoutes } from "./routes/chatRoutes.js";
 import { messageRoutes } from "./routes/messageRoutes.js";
 import path from 'path';
-import express from "express";
 import { Server } from "socket.io";
+import express from "express";
 import dotenv from "dotenv";
 
 dotenv.config();
