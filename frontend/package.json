@@ -23,11 +23,12 @@
     "react-scripts": "5.0.1",
     "react-scrollable-feed": "^2.0.2",
     "socket.io-client": "^4.7.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0"
   },
   "scripts": {
     "start": "node ../backend/server.js react-scripts start",
-    "build": "npm install  npm run build react-script build"
+    "build": "react-scripts build npm install npm run build"
   },
   "eslintConfig": {
     "extends": [
