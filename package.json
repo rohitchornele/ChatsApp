@@ -33,7 +33,7 @@
   "scripts": {
     "start": "node server.js prefix --backend",
     "server": "node ./backend/server.js",
-    "build": " npm install --prefix backend && npm install express --prefix backend && npm install dotenv --prefix backend && npm install socket.io && npm install socket.io --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "build": " npm install --prefix backend && npm install express --prefix backend && npm install dotenv --prefix backend && npm install socket.io --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
