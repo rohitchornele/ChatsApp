@@ -6,7 +6,6 @@ import { messageRoutes } from "./routes/messageRoutes.js";
 import path from 'path';
 import { createServer } from "http";
 import { Server } from "socket.io";
-import cors from 'cors';
 import express from "express";
 import dotenv from "dotenv";
 
@@ -18,7 +17,6 @@ const app = express();
 
 // app.use(express());
 app.use(express.json());
-app.use(cors())
 
 const PORT = process.env.PORT || 8000;
 
