@@ -13,6 +13,7 @@ import dotenv from "dotenv";
 dotenv.config();
 connectDB();
 
+
 const app = express();
 
 // app.use(express());
@@ -40,7 +41,6 @@ app.listen(
   console.log(`Server is running on port ${PORT}`)
 );
 
-// const io = new Server();
 
 const io = new Server(
     server,
