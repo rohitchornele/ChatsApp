@@ -1,5 +1,4 @@
 import express from "express";
-import { chats } from "./data/data.js";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import { userRoutes } from "./routes/userRoutes.js";
@@ -14,6 +13,7 @@ connectDB();
 
 const app = express();
 
+app.use(express);
 app.use(express.json());
 
 const PORT = process.env.PORT || 8000;
