@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "node ../backend/server.js react-scripts start",
-    "build": "npm install --prefix frontend && npm run build"
+    "build": "npm install  npm run build react-script-build"
   },
   "eslintConfig": {
     "extends": [
