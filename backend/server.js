@@ -1,4 +1,3 @@
-import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import { userRoutes } from "./routes/userRoutes.js";
@@ -7,6 +6,7 @@ import { chatRoutes } from "./routes/chatRoutes.js";
 import { messageRoutes } from "./routes/messageRoutes.js";
 import { Server } from "socket.io";
 import path from 'path';
+import express from "express";
 
 dotenv.config();
 connectDB();
@@ -15,6 +15,7 @@ const app = express();
 
 app.use(express());
 app.use(express.json());
+app.use(express.static());
 
 const PORT = process.env.PORT || 8000;
 
