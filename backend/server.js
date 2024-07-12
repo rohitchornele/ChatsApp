@@ -1,13 +1,14 @@
 import { connectDB } from "./config/db.js";
 import { userRoutes } from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
-import { Server } from "socket.io";
 import { chatRoutes } from "./routes/chatRoutes.js";
 import { messageRoutes } from "./routes/messageRoutes.js";
 import path from 'path';
 import { createServer } from "http";
 import express from "express";
 import dotenv from "dotenv";
+import { Server } from "socket.io";
+import cors from 'cors';
 
 dotenv.config();
 connectDB();
@@ -16,6 +17,7 @@ const app = express();
 
 app.use(express());
 app.use(express.json());
+app.use(cors())
 
 const PORT = process.env.PORT || 8000;
 
