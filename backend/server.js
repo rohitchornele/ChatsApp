@@ -11,7 +11,6 @@ import dotenv from "dotenv";
 dotenv.config();
 connectDB();
 
-
 const app = express();
 
 // app.use(express());
@@ -19,14 +18,10 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 8000;
 
-
     app.use("/api/user", userRoutes);
     app.use("/api/chat", chatRoutes);
     app.use("/api/message", messageRoutes);
     
-
-
-
 app.use(notFound);
 app.use(errorHandler);
 
@@ -48,7 +43,6 @@ const io = new Server(
       
 }
 );
-
 
 io.on("connection", (socket) => {
   socket.on(
@@ -89,9 +83,9 @@ io.on("connection", (socket) => {
     
     const __dirname = path.resolve();
     if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, '../frontend/build')));
+    app.use(express.static(path.join(__dirname, 'frontend/build')));
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, "../frontend", "build", "index.html"));
+        res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
     })
 } else {
     app.get('/', (req, res) => {
