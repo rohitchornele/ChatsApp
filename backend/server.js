@@ -4,7 +4,6 @@ import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 import { chatRoutes } from "./routes/chatRoutes.js";
 import { messageRoutes } from "./routes/messageRoutes.js";
 import path from 'path';
-import { createServer } from "http";
 import { Server } from "socket.io";
 import express from "express";
 import dotenv from "dotenv";
@@ -32,9 +31,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 
-const server = createServer();
-
-app.listen(
+const server = app.listen(
   PORT,
   console.log(`Server is running on port ${PORT}`)
 );
